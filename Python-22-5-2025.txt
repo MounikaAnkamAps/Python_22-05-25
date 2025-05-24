@@ -1,0 +1,62 @@
+Q1 : Multiplication Table (1 to 10)
+Write a Python program using nested loops to print the multiplication tables from 1 to 10.
+Example Output (partially shown)
+1 x 1 = 1
+1 x 2 = 2
+...
+10 x 10 = 100
+
+--  n=int(input())
+    for i in range(1,n+1):
+    	 for j in range(1,11):
+             print(i,"*",j,"=",(i*j))
+         print()
+
+Q2. Count Prime Numbers in a Range (1 to 100)
+Using nested loops, count how many prime numbers exist between 1 and 100.
+Hint : A number is prime if it’s only divisible by 1 and itself.
+
+-- n = int(input())
+   count = 0  
+   for i in range(2, n + 1):
+       c = 0
+       for j in range(2, i):
+           if i % j == 0:
+               c = c + 1
+       if c == 0:
+           count += 1  
+    print("Total prime numbers:", count)
+
+
+Q3. Print All Pairs of Numbers (1 to n) Where Sum is Even
+Ask the user to enter a number n. Using nested loops, print all pairs (i, j) from 1 to n where the sum i + j is even.
+Example for n = 3:
+(1,1)
+(1,3)
+(2,2)
+(3,1)
+(3,3)
+
+-- n=int(input())
+   for i in range(1,n+1):
+       for j in range(1,i+1):
+           if((i+j)%2==0):
+               print(i,j)
+
+Q4. Count Total Factors of All Numbers from 1 to n
+Ask the user to enter a number n. Use nested loops to find how many total factors (divisors) exist for all numbers from 1 to n.
+Example for n = 4
+1 → 1
+2 → 1, 2
+3 → 1, 3
+4 → 1, 2, 4
+Total = 8 factors
+
+-- n = int(input())
+   total_factors = 0
+   for i in range(1, n + 1):       
+       for j in range(1, i + 1):    
+           if i % j == 0:
+               total_factors += 1   
+   print("Total number of factors: ", total_factors)
+
